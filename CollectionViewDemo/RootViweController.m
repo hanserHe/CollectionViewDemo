@@ -10,6 +10,8 @@
 
 @interface RootViweController ()
 
+@property (nonatomic, strong) UICollectionView *collectionView;
+
 @end
 
 @implementation RootViweController
@@ -18,6 +20,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"CollectionView";
+    
 }
 
 - (void)didReceiveMemoryWarning {

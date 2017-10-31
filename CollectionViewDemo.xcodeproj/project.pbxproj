@@ -13,6 +13,8 @@
 		58925BCB1FA817BA00EFBDFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58925BC91FA817BA00EFBDFB /* LaunchScreen.storyboard */; };
 		58925BCE1FA817BA00EFBDFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58925BCD1FA817BA00EFBDFB /* main.m */; };
 		58925BD61FA8181A00EFBDFB /* RootViweController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58925BD51FA8181A00EFBDFB /* RootViweController.m */; };
+		58925BDD1FA81E2A00EFBDFB /* Jastor.m in Sources */ = {isa = PBXBuildFile; fileRef = 58925BDA1FA81E2A00EFBDFB /* Jastor.m */; };
+		58925BDE1FA81E2A00EFBDFB /* JastorRuntimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 58925BDC1FA81E2A00EFBDFB /* JastorRuntimeHelper.m */; };
 		AA56F17308EBAF120D38CDD6 /* libPods-CollectionViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15635EAA1DBE2FF7F04B97B7 /* libPods-CollectionViewDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +30,11 @@
 		58925BCD1FA817BA00EFBDFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		58925BD41FA8181A00EFBDFB /* RootViweController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViweController.h; sourceTree = "<group>"; };
 		58925BD51FA8181A00EFBDFB /* RootViweController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViweController.m; sourceTree = "<group>"; };
+		58925BD91FA81E2A00EFBDFB /* Jastor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Jastor.h; sourceTree = "<group>"; };
+		58925BDA1FA81E2A00EFBDFB /* Jastor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Jastor.m; sourceTree = "<group>"; };
+		58925BDB1FA81E2A00EFBDFB /* JastorRuntimeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JastorRuntimeHelper.h; sourceTree = "<group>"; };
+		58925BDC1FA81E2A00EFBDFB /* JastorRuntimeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JastorRuntimeHelper.m; sourceTree = "<group>"; };
+		58925BE01FA825A900EFBDFB /* Constants.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.pch; sourceTree = "<group>"; };
 		627E125094057A6E6ACF5730 /* Pods-CollectionViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollectionViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CollectionViewDemo/Pods-CollectionViewDemo.release.xcconfig"; sourceTree = "<group>"; };
 		D2DFE47122A45F967C3A7904 /* Pods-CollectionViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollectionViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CollectionViewDemo/Pods-CollectionViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +72,7 @@
 		58925BBD1FA817BA00EFBDFB /* CollectionViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				58925BD71FA81DFF00EFBDFB /* Public */,
 				58925BBE1FA817BA00EFBDFB /* AppDelegate.h */,
 				58925BBF1FA817BA00EFBDFB /* AppDelegate.m */,
 				58925BD41FA8181A00EFBDFB /* RootViweController.h */,
@@ -76,6 +84,34 @@
 				58925BCD1FA817BA00EFBDFB /* main.m */,
 			);
 			path = CollectionViewDemo;
+			sourceTree = "<group>";
+		};
+		58925BD71FA81DFF00EFBDFB /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				58925BDF1FA8258D00EFBDFB /* Constants */,
+				58925BD81FA81E2A00EFBDFB /* Jastor */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		58925BD81FA81E2A00EFBDFB /* Jastor */ = {
+			isa = PBXGroup;
+			children = (
+				58925BD91FA81E2A00EFBDFB /* Jastor.h */,
+				58925BDA1FA81E2A00EFBDFB /* Jastor.m */,
+				58925BDB1FA81E2A00EFBDFB /* JastorRuntimeHelper.h */,
+				58925BDC1FA81E2A00EFBDFB /* JastorRuntimeHelper.m */,
+			);
+			path = Jastor;
+			sourceTree = "<group>";
+		};
+		58925BDF1FA8258D00EFBDFB /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				58925BE01FA825A900EFBDFB /* Constants.pch */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		A377332DE592CAD662BA3B32 /* Frameworks */ = {
@@ -219,7 +255,9 @@
 			files = (
 				58925BCE1FA817BA00EFBDFB /* main.m in Sources */,
 				58925BD61FA8181A00EFBDFB /* RootViweController.m in Sources */,
+				58925BDD1FA81E2A00EFBDFB /* Jastor.m in Sources */,
 				58925BC01FA817BA00EFBDFB /* AppDelegate.m in Sources */,
+				58925BDE1FA81E2A00EFBDFB /* JastorRuntimeHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +393,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CollectionViewDemo/Public/Constants/Constants.pch";
 				INFOPLIST_FILE = CollectionViewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Hanser.CollectionViewDemo;
@@ -369,6 +409,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CollectionViewDemo/Public/Constants/Constants.pch";
 				INFOPLIST_FILE = CollectionViewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Hanser.CollectionViewDemo;

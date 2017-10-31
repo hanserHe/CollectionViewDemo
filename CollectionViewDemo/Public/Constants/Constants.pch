@@ -1,0 +1,21 @@
+//
+//  Constants.pch
+//  CollectionViewDemo
+//
+//  Created by Hanser on 31/10/2017.
+//  Copyright © 2017 Mr.H. All rights reserved.
+//
+
+#ifndef Constants_pch
+#define Constants_pch
+
+
+#endif /* Constants_pch */
+
+#ifdef __OBJC__
+
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenWidth [UIScreen mainScreen].bounds.size.height
+
+
+#endif
