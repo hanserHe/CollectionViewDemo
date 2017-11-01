@@ -21,15 +21,21 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"CollectionView";
-    NSString *url = @"http://api.vd.cn/mengdianApp/getAppHomePop";
+    NSString *url = @"http://api.vd.cn/maps/index";
     NSDictionary *param = @{
-                            @"_sign_": @"8215E80F599B9A99B73FE6F147568C21",
+                            @"_sign_": @"1651A1997D81AAB1E6CD49A26F3B97CC",
                             @"BaseAppVersion": @"4.10.0",
+                            @"parameterInput": @{
+                                @"pageSize": @10,
+                                @"page": @1
+                            },
                             @"hardware": @"x86_64",
-                            @"SystemVersion": @"11.0.1",
+                            @"timeStamp": @"2017-11-01T14:08:44.971Z",
+                            @"SystemVersion": @"11.1",
                             @"appIdentifier": @"com.hs.yjsellerhoc",
-                            @"spreadChannel": @"app store",
-                            @"BaseAppType": @"ios"                            };
+                            @"BaseAppType": @"ios",
+                            @"spreadChannel": @"app store"
+                            };
     [[HTTPNetworkEngine shareInstantce] postWithUrl:url postParam:param success:^(NSDictionary *data) {
         NSLog(@"%@",data);
     } failure:^(NSError *error) {

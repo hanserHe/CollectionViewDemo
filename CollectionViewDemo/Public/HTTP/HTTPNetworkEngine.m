@@ -26,6 +26,10 @@ const NSInteger outTime = 5;
             success:(HSSuccessBlock)success
             failure:(HSFailureBlock)failure {
     AFHTTPSessionManager *mananger  = [AFHTTPSessionManager manager];
+    /**可接收类型 */
+    /**JSON */
+    mananger.requestSerializer = [AFJSONRequestSerializer serializer];
+    /**Dictionary */
     mananger.responseSerializer = [AFHTTPResponseSerializer serializer];
     mananger.operationQueue.maxConcurrentOperationCount = 10;
     mananger.requestSerializer.timeoutInterval = outTime;
