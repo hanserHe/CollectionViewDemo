@@ -21,14 +21,19 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"CollectionView";
+   
+    [self getGoodsData];
+}
+
+- (void)getGoodsData {
     NSString *url = @"http://api.vd.cn/maps/index";
     NSDictionary *param = @{
                             @"_sign_": @"1651A1997D81AAB1E6CD49A26F3B97CC",
                             @"BaseAppVersion": @"4.10.0",
                             @"parameterInput": @{
-                                @"pageSize": @10,
-                                @"page": @1
-                            },
+                                    @"pageSize": @10,
+                                    @"page": @1
+                                    },
                             @"hardware": @"x86_64",
                             @"timeStamp": @"2017-11-01T14:08:44.971Z",
                             @"SystemVersion": @"11.1",
@@ -43,9 +48,5 @@
     }];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end
