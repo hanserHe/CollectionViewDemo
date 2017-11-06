@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class GoodsInfo;
 @interface GoodsComponentBody : UIView
+
+@property (nonatomic, strong) GoodsInfo *goodsInfo;
 
 @end

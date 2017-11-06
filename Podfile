@@ -6,6 +6,7 @@ target 'CollectionViewDemo' do
   # use_frameworks!
   pod 'AFNetworking'
   pod 'MJExtension'
+  pod 'SDWebImage'
   # Pods for CollectionViewDemo
 
 end

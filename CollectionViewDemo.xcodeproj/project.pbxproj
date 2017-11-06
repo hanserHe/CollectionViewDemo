@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58126E911FAC473E004B3770 /* CoverComponentLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 58126E901FAC473E004B3770 /* CoverComponentLayout.m */; };
+		58126E951FAC491A004B3770 /* CoverComponentCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58126E941FAC491A004B3770 /* CoverComponentCollectionCell.m */; };
 		58925BC01FA817BA00EFBDFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58925BBF1FA817BA00EFBDFB /* AppDelegate.m */; };
 		58925BC61FA817BA00EFBDFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58925BC41FA817BA00EFBDFB /* Main.storyboard */; };
 		58925BC81FA817BA00EFBDFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58925BC71FA817BA00EFBDFB /* Assets.xcassets */; };
@@ -16,16 +18,20 @@
 		58925BDD1FA81E2A00EFBDFB /* Jastor.m in Sources */ = {isa = PBXBuildFile; fileRef = 58925BDA1FA81E2A00EFBDFB /* Jastor.m */; };
 		58925BDE1FA81E2A00EFBDFB /* JastorRuntimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 58925BDC1FA81E2A00EFBDFB /* JastorRuntimeHelper.m */; };
 		58925BE41FA85BB200EFBDFB /* HTTPNetworkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 58925BE31FA85BB200EFBDFB /* HTTPNetworkEngine.m */; };
+		58A50A231FAAF3F300A8E7FC /* GoodsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A50A221FAAF3F300A8E7FC /* GoodsInfo.m */; };
+		58A50A261FAC10F200A8E7FC /* GoodsCoverSwiperReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A50A251FAC10F200A8E7FC /* GoodsCoverSwiperReusableView.m */; };
 		58EB45F91FA9BA3500C7F16E /* GoodsComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 58EB45F81FA9BA3500C7F16E /* GoodsComponent.m */; };
 		58EB45FC1FA9BA8700C7F16E /* GoodsComponentHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 58EB45FB1FA9BA8700C7F16E /* GoodsComponentHeader.m */; };
 		58EB45FF1FA9BA9F00C7F16E /* GoodsComponentBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 58EB45FE1FA9BA9F00C7F16E /* GoodsComponentBody.m */; };
-		58EB46031FA9BB3900C7F16E /* PictureInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 58EB46021FA9BB3900C7F16E /* PictureInfo.m */; };
-		58EB46061FA9C31E00C7F16E /* ComponentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 58EB46051FA9C31E00C7F16E /* ComponentInfo.m */; };
 		AA56F17308EBAF120D38CDD6 /* libPods-CollectionViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15635EAA1DBE2FF7F04B97B7 /* libPods-CollectionViewDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		15635EAA1DBE2FF7F04B97B7 /* libPods-CollectionViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CollectionViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		58126E8F1FAC473E004B3770 /* CoverComponentLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverComponentLayout.h; sourceTree = "<group>"; };
+		58126E901FAC473E004B3770 /* CoverComponentLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverComponentLayout.m; sourceTree = "<group>"; };
+		58126E931FAC491A004B3770 /* CoverComponentCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoverComponentCollectionCell.h; sourceTree = "<group>"; };
+		58126E941FAC491A004B3770 /* CoverComponentCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoverComponentCollectionCell.m; sourceTree = "<group>"; };
 		58925BBB1FA817BA00EFBDFB /* CollectionViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58925BBE1FA817BA00EFBDFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		58925BBF1FA817BA00EFBDFB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -43,16 +49,16 @@
 		58925BE01FA825A900EFBDFB /* Constants.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.pch; sourceTree = "<group>"; };
 		58925BE21FA85BB200EFBDFB /* HTTPNetworkEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPNetworkEngine.h; sourceTree = "<group>"; };
 		58925BE31FA85BB200EFBDFB /* HTTPNetworkEngine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTTPNetworkEngine.m; sourceTree = "<group>"; };
+		58A50A211FAAF3F300A8E7FC /* GoodsInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoodsInfo.h; sourceTree = "<group>"; };
+		58A50A221FAAF3F300A8E7FC /* GoodsInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoodsInfo.m; sourceTree = "<group>"; };
+		58A50A241FAC10F200A8E7FC /* GoodsCoverSwiperReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoodsCoverSwiperReusableView.h; sourceTree = "<group>"; };
+		58A50A251FAC10F200A8E7FC /* GoodsCoverSwiperReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoodsCoverSwiperReusableView.m; sourceTree = "<group>"; };
 		58EB45F71FA9BA3500C7F16E /* GoodsComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoodsComponent.h; sourceTree = "<group>"; };
 		58EB45F81FA9BA3500C7F16E /* GoodsComponent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoodsComponent.m; sourceTree = "<group>"; };
 		58EB45FA1FA9BA8700C7F16E /* GoodsComponentHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoodsComponentHeader.h; sourceTree = "<group>"; };
 		58EB45FB1FA9BA8700C7F16E /* GoodsComponentHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoodsComponentHeader.m; sourceTree = "<group>"; };
 		58EB45FD1FA9BA9F00C7F16E /* GoodsComponentBody.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoodsComponentBody.h; sourceTree = "<group>"; };
 		58EB45FE1FA9BA9F00C7F16E /* GoodsComponentBody.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoodsComponentBody.m; sourceTree = "<group>"; };
-		58EB46011FA9BB3900C7F16E /* PictureInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PictureInfo.h; sourceTree = "<group>"; };
-		58EB46021FA9BB3900C7F16E /* PictureInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PictureInfo.m; sourceTree = "<group>"; };
-		58EB46041FA9C31E00C7F16E /* ComponentInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComponentInfo.h; sourceTree = "<group>"; };
-		58EB46051FA9C31E00C7F16E /* ComponentInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComponentInfo.m; sourceTree = "<group>"; };
 		627E125094057A6E6ACF5730 /* Pods-CollectionViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollectionViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CollectionViewDemo/Pods-CollectionViewDemo.release.xcconfig"; sourceTree = "<group>"; };
 		D2DFE47122A45F967C3A7904 /* Pods-CollectionViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollectionViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CollectionViewDemo/Pods-CollectionViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +75,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58126E921FAC48D4004B3770 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				58126E931FAC491A004B3770 /* CoverComponentCollectionCell.h */,
+				58126E941FAC491A004B3770 /* CoverComponentCollectionCell.m */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		58925BB21FA817B900EFBDFB = {
 			isa = PBXGroup;
 			children = (
@@ -155,12 +170,17 @@
 		58EB45F61FA9BA0800C7F16E /* GoodsComponent */ = {
 			isa = PBXGroup;
 			children = (
+				58126E921FAC48D4004B3770 /* cell */,
+				58126E8F1FAC473E004B3770 /* CoverComponentLayout.h */,
+				58126E901FAC473E004B3770 /* CoverComponentLayout.m */,
 				58EB45F71FA9BA3500C7F16E /* GoodsComponent.h */,
 				58EB45F81FA9BA3500C7F16E /* GoodsComponent.m */,
 				58EB45FA1FA9BA8700C7F16E /* GoodsComponentHeader.h */,
 				58EB45FB1FA9BA8700C7F16E /* GoodsComponentHeader.m */,
 				58EB45FD1FA9BA9F00C7F16E /* GoodsComponentBody.h */,
 				58EB45FE1FA9BA9F00C7F16E /* GoodsComponentBody.m */,
+				58A50A241FAC10F200A8E7FC /* GoodsCoverSwiperReusableView.h */,
+				58A50A251FAC10F200A8E7FC /* GoodsCoverSwiperReusableView.m */,
 			);
 			path = GoodsComponent;
 			sourceTree = "<group>";
@@ -168,10 +188,8 @@
 		58EB46001FA9BB1700C7F16E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				58EB46011FA9BB3900C7F16E /* PictureInfo.h */,
-				58EB46021FA9BB3900C7F16E /* PictureInfo.m */,
-				58EB46041FA9C31E00C7F16E /* ComponentInfo.h */,
-				58EB46051FA9C31E00C7F16E /* ComponentInfo.m */,
+				58A50A211FAAF3F300A8E7FC /* GoodsInfo.h */,
+				58A50A221FAAF3F300A8E7FC /* GoodsInfo.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -315,17 +333,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58A50A231FAAF3F300A8E7FC /* GoodsInfo.m in Sources */,
+				58126E911FAC473E004B3770 /* CoverComponentLayout.m in Sources */,
 				58925BCE1FA817BA00EFBDFB /* main.m in Sources */,
+				58126E951FAC491A004B3770 /* CoverComponentCollectionCell.m in Sources */,
 				58EB45FC1FA9BA8700C7F16E /* GoodsComponentHeader.m in Sources */,
 				58925BD61FA8181A00EFBDFB /* RootViweController.m in Sources */,
 				58925BDD1FA81E2A00EFBDFB /* Jastor.m in Sources */,
-				58EB46061FA9C31E00C7F16E /* ComponentInfo.m in Sources */,
 				58925BC01FA817BA00EFBDFB /* AppDelegate.m in Sources */,
 				58925BE41FA85BB200EFBDFB /* HTTPNetworkEngine.m in Sources */,
 				58EB45F91FA9BA3500C7F16E /* GoodsComponent.m in Sources */,
 				58925BDE1FA81E2A00EFBDFB /* JastorRuntimeHelper.m in Sources */,
-				58EB46031FA9BB3900C7F16E /* PictureInfo.m in Sources */,
 				58EB45FF1FA9BA9F00C7F16E /* GoodsComponentBody.m in Sources */,
+				58A50A261FAC10F200A8E7FC /* GoodsCoverSwiperReusableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

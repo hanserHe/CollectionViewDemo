@@ -43,4 +43,9 @@
     return _title;
 }
 
+- (void)setTitleInfo:(TitleInfo *)titleInfo {
+    _titleInfo = titleInfo;
+    [_imageView sd_setImageWithURL:[NSURL URLWithString:_titleInfo.pictureUrl]];
+}
+
 @end

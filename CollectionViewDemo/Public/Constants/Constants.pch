@@ -16,7 +16,31 @@
 
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
+
+//忽略未定义方法警告
+#define  SUPPRESS_Undeclaredselector_WARNING(Stuff) \
+do { \
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Wundeclared-selector\"") \
+Stuff; \
+_Pragma("clang diagnostic pop") \
+} while (0)
+
+//忽略PerformSelector警告
+#define SUPPRESS_PerformSelectorLeak_WARNING(Stuff) \
+do { \
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Warc-performSelector-leaks\"") \
+Stuff; \
+_Pragma("clang diagnostic pop") \
+} while (0)
+
+// weakself 宏
+#define WEAKSELF    __weak __typeof(&*self) weakSelf = self;
+
+
 #import "HTTPNetworkEngine.h"
+#import "UIImageView+WebCache.h"
 
 
 #endif

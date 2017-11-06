@@ -75,7 +75,10 @@ Class nsArrayClass;
 //                        NSAssert1([[self class] respondsToSelector:selector], @"请重载%@方法", selectorString);
                         
                         if ([[self class] respondsToSelector:selector]) {
-                            Class arrayItemType = [[self class] performSelector:selector];
+                            Class arrayItemType;
+                             SUPPRESS_PerformSelectorLeak_WARNING(
+                                           arrayItemType = [[self class] performSelector:selector]
+                                                                                       );
                             if ([arrayItemType isSubclassOfClass:[NSDictionary class]]) {
                                 [childObjects addObject:child];
                             } else if ([arrayItemType isSubclassOfClass:[Jastor class]]) {
