@@ -8,13 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "GoodsInfo.h"
-//#import "PictureInfo.h"
 
 @interface GoodsComponentHeader : UIControl
 
 @property (nonatomic, strong) UILabel *title;
 @property (nonatomic, strong) UIImageView *imageView;
-//@property (nonatomic, strong) PictureInfo *pictureInfo;
 @property (nonatomic, strong) TitleInfo *titleInfo;
 
 @end

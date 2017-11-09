@@ -23,9 +23,8 @@
 - (UIImageView *)imageView
 {
     if (!_imageView) {
-        _imageView = [[UIImageView alloc] initWithFrame:self.bounds];
+        _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
         _imageView.contentMode = UIViewContentModeScaleAspectFill;
-        _imageView.hidden = YES;
     }
     return _imageView;
 }
@@ -46,6 +45,11 @@
 - (void)setTitleInfo:(TitleInfo *)titleInfo {
     _titleInfo = titleInfo;
     [_imageView sd_setImageWithURL:[NSURL URLWithString:_titleInfo.pictureUrl]];
+}
+
+- (void)setFrame:(CGRect)frame {
+    [super setFrame:frame];
+    self.imageView.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
 }
 
 @end

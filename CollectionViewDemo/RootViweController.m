@@ -57,8 +57,8 @@
         NSDictionary *dicArray = [[components objectAtIndex:3] objectForKey:@"images"];
         weakSelf.goodsInfo.images = [PictureInfo mj_objectArrayWithKeyValuesArray:dicArray];
         
-        PictureInfo *pictureInfo = [weakSelf.goodsInfo.images objectAtIndex:1];
-        NSLog(@"%@",pictureInfo.pictureUrl);
+        [weakSelf.collectionView reloadData];
+
     } failure:^(NSError *error) {
         NSLog(@"%@",error);
     }];
@@ -91,7 +91,8 @@
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
         GoodsCoverSwiperReusableView *view = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"GoodsCoverSwiperReusableView" forIndexPath:indexPath];
-        view.backgroundColor = [UIColor greenColor];
+        view.backgroundColor = [UIColor whiteColor];
+        view.goodsComponent.goodsInfo = self.goodsInfo;
         return view;
     }
     return nil;

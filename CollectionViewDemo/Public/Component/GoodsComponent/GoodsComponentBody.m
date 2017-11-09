@@ -11,11 +11,12 @@
 #import "CoverComponentCollectionCell.h"
 #import "GoodsInfo.h"
 
-@interface GoodsComponentBody()<UICollectionViewDelegate, UICollectionViewDataSource>
+@interface GoodsComponentBody()<UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate>
 
 @property (nonatomic, assign) NSInteger count;
 @property (nonatomic, assign) NSInteger realCount;
 @property (nonatomic, strong) UICollectionView *collectionView;
+@property (nonatomic, strong) NSTimer *timer;
 
 @end
 
@@ -34,9 +35,12 @@
         return _collectionView;
     }
     CoverComponentLayout *layout = [[CoverComponentLayout alloc] init];
+    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     _collectionView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:layout];
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
+    _collectionView.showsHorizontalScrollIndicator = NO;
+    _collectionView.backgroundColor = [UIColor clearColor];
     [_collectionView registerClass:[CoverComponentCollectionCell class] forCellWithReuseIdentifier:@"CoverComponentCollectionCell"];
     return _collectionView;
 }
@@ -45,10 +49,21 @@
     if (_goodsInfo != goodsInfo) {
         _goodsInfo = goodsInfo;
         
+        _realCount = _goodsInfo.images.count;
+        _count = _realCount * 3;
+        [self setupCollectionLayout];
+
         [self.collectionView reloadData];
         [self scrollToPage:1 animated:NO];
+        [self.timer fire];
 
     }
+}
+
+- (void)setFrame:(CGRect)frame
+{
+    [super setFrame:frame];
+    [self.collectionView setFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
 }
 
 - (void)setupCollectionLayout
@@ -68,6 +83,29 @@
     CoverComponentLayout *layout = (CoverComponentLayout *)_collectionView.collectionViewLayout;
     CGFloat offsetX = (layout.itemSize.width + layout.minimumLineSpacing) * page - (_collectionView.frame.size.width / 2 - layout.itemSize.width / 2);
     [_collectionView setContentOffset:CGPointMake(offsetX + layout.sectionInset.left, 0) animated:animated];
+}
+
+- (NSTimer *)timer {
+    if (_timer) {
+        return _timer;
+    }
+    _timer = [NSTimer scheduledTimerWithTimeInterval:5
+                                              target:self selector:@selector(timeDidFired:)
+                                            userInfo:nil
+                                             repeats:YES];
+    return _timer;
+}
+
+- (void)timeDidFired:(NSTimer *)timer {
+    NSInteger pageNum = [self currentPage];
+    [self scrollToPage:pageNum + 1 animated:YES];
+}
+
+- (NSInteger)currentPage
+{
+    CoverComponentLayout *layout = (CoverComponentLayout *)_collectionView.collectionViewLayout;
+    NSInteger pageNum = (_collectionView.contentOffset.x - layout.sectionInset.left + _collectionView.frame.size.width / 2.0f) / (layout.itemSize.width + layout.minimumLineSpacing);
+    return pageNum;
 }
 
 
@@ -95,5 +133,41 @@
     return cell;
 }
 
+//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+//    return CGSizeMake(163, 112);
+//}
+
+
+
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
+{
+    [self scrollViewDidEndDecelerating:scrollView];
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    // NSLog(@"第 %ld 页     offset.x: %f", [self currentPage], _collectionView.contentOffset.x);
+    
+    // 如果落在第一和第三区间，要移到第二区间
+    
+    if ([self currentPage] < _realCount) {  // 第一区间
+        [self scrollToPage:[self currentPage] + _realCount animated:NO];
+    } else if ([self currentPage] >= _realCount && [self currentPage] < _realCount * 2) {   // 第二区间
+        
+    } else if ([self currentPage] >= _realCount * 2) {   // 第三区间
+        [self scrollToPage:[self currentPage] - _realCount animated:NO];
+    }
+}
+
+
+
+- (void)dealloc {
+    if (_timer) {
+        [_timer invalidate];
+        _timer = nil;
+    }
+}
 
 @end

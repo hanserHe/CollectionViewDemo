@@ -17,7 +17,8 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        
+        [self addSubview:self.componentHeader];
+        [self addSubview:self.componentBody];
     }
     return self;
 }
@@ -42,6 +43,7 @@
     if (_goodsInfo != goodsInfo) {
         _goodsInfo = goodsInfo;
         _componentBody.goodsInfo = goodsInfo;
+        _componentHeader.titleInfo = goodsInfo.titleInfo;
     }
 }
 
