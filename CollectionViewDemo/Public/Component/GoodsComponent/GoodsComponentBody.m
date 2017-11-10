@@ -141,6 +141,10 @@
 
 #pragma mark - UIScrollViewDelegate
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"%ld",indexPath.row);
+}
+
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
 {
     [self scrollViewDidEndDecelerating:scrollView];
