@@ -8,7 +8,7 @@
 
 #import "GoodsComponent.h"
 
-@interface GoodsComponent()
+@interface GoodsComponent()<GoodsComponentBodyDelegate>
 
 @end
 
@@ -36,6 +36,7 @@
         return _componentBody;
     }
     _componentBody = [[GoodsComponentBody alloc] initWithFrame:CGRectMake(0, 50, ScreenWidth, self.frame.size.height-50)];
+    _componentBody.delegate = self;
     return _componentBody;
 }
 
@@ -47,5 +48,8 @@
     }
 }
 
-
+#pragma mark - GoodsComponentBodyDelegate
+- (void)goodsComponentBody:(GoodsComponentBody *)goodsComponentBody didSelectItemAtIndex:(NSInteger)index {
+    [_componentBody scrollToPage:index animated:YES];
+}
 @end

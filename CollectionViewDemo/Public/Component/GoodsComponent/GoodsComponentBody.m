@@ -142,6 +142,9 @@
 #pragma mark - UIScrollViewDelegate
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if ([_delegate respondsToSelector:@selector(goodsComponentBody:didSelectItemAtIndex:)]) {
+        [_delegate goodsComponentBody:self didSelectItemAtIndex:indexPath.row];
+    }
     NSLog(@"%ld",indexPath.row);
 }
 
